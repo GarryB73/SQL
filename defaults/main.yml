@@ -1,5 +1,5 @@
 # installation files source 
-mssql_installation_source: https://go.microsoft.com/fwlink/?linkid=853016
+#mssql_installation_source: https://go.microsoft.co,dc=uk/fwlink/?linkid=853016
 
 # Path to download installation media to
 mssql_installation_path: C:\SQLInstall
@@ -32,17 +32,17 @@ mssql_suppress_reboot: False
 
 ### Service Accounts ###
 
-mssql_base_ldap_path: "cn=Users,dc=CONTOSO,dc=com"
+mssql_base_ldap_path: "cn=Users,dc=test,dc=co,dc=uk"
 domain_controller: dc01
 
 # SQL Service Account
-# regex statements used in some steps expect the format of CONTOSO\
-# do not use @CONTOSO.com for these accounts as SQL install will fail
-mssql_sqlsvc_account: CONTOSO\sql_svc
+# regex statements used in some steps expect the format of test\
+# do not use @test.co,dc=uk for these accounts as SQL install will fail
+mssql_sqlsvc_account: test\sql_svc
 mssql_sqlsvc_account_pass: MyPlainTextPassWord01
 
 # SQL Agent Service Account
-mssql_agentsvc_account: CONTOSO\sql_agt
+mssql_agentsvc_account: test\sql_agt
 mssql_agentsvc_account_pass: MyPlainTextPassWord01
 
 # SQL Analysis Services Account
@@ -122,8 +122,8 @@ mssql_browsersvc_mode: Automatic
 # Default Account Access
 # Ansible_Admin must be included so that the playbook can make configuration changes post install
 mssql_sysadmin_accounts: 
-  - CONTOSO\Domain Admins
-  - CONTOSO\Administrator
+  - test\Domain Admins
+  - test\Administrator
 
 # Analysis Services Admins (if installed)
 mssql_asadmin_accounts: "{{ mssql_sysadmin_accounts }}"
@@ -140,7 +140,7 @@ mssql_asadmin_accounts: "{{ mssql_sysadmin_accounts }}"
 #
 # To enable the server to determine the maximum degree of parallelism, set this option to 0, the default value. 
 #
-# See: https://docs.microsoft.com/en-us/sql/database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option
+# See: https://docs.microsoft.co,dc=uk/en-us/sql/database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option
 mssql_max_degree_of_parallelism: 0
 
 # Minimum memory to allocate to SQL
@@ -148,7 +148,7 @@ mssql_max_degree_of_parallelism: 0
 # Should remain 0 in most cases.
 #
 # see: Optimizing Server Performance Using Memory Configuration Options
-# https://technet.microsoft.com/en-us/library/ms177455(v=sql.105).aspx
+# https://technet.microsoft.co,dc=uk/en-us/library/ms177455(v=sql.105).aspx
 #
 # The min server memory server configuration option can be used to ensure that 
 # SQL Server does not release memory below the configured minimum server memory 
