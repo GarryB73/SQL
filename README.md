@@ -76,13 +76,13 @@ mssql_suppress_reboot: False
 ### Service Accounts ###
 
 # SQL Service Account
-# regex statements used in some steps expect the format of CONTOSO\
-# do not use @CONTOSO.com for these accounts as SQL install will fail
-mssql_sqlsvc_account: CONTOSO\sql_svc
+# regex statements used in some steps expect the format of Test\
+# do not use  Test.com for these accounts as SQL install will fail
+mssql_sqlsvc_account: Test\sql_svc
 mssql_sqlsvc_account_pass: MyPlainTextPassWord01
 
 # SQL Agent Service Account
-mssql_agentsvc_account: CONTOSO\sql_agt
+mssql_agentsvc_account: Test\sql_agt
 mssql_agentsvc_account_pass: MyPlainTextPassWord01
 
 # SQL Analysis Services Account
@@ -162,8 +162,8 @@ mssql_browsersvc_mode: Automatic
 # Default Account Access
 # Ansible_Admin must be included so that the playbook can make configuration changes post install
 mssql_sysadmin_accounts: 
-  - CONTOSO\Domain Admins
-  - CONTOSO\Administrator
+  - Test\Domain Admins
+  - Test\Administrator
 
 # Analysis Services Admins (if installed)
 mssql_asadmin_accounts: "{{ mssql_sysadmin_accounts }}"
