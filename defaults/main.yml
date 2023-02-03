@@ -33,7 +33,7 @@ mssql_suppress_reboot: False
 ### Service Accounts ###
 
 mssql_base_ldap_path: "cn=Users,dc=test,dc=co,dc=uk"
-domain_controller: dc01
+domain_controller: testdc001
 
 # SQL Service Account
 # regex statements used in some steps expect the format of test\

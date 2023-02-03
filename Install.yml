@@ -2,4 +2,4 @@
   hosts: sql_server
   tags: mssql
   roles:
-  - meta
+  - - { role: kkolk.mssql }
