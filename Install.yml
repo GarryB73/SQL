@@ -1,5 +1,5 @@
 - name: SQL Server
-  hosts: sql_server
+  hosts: sql
   tags: mssql
   roles:
-  - - { role: kkolk.mssql }
+  - { role: kkolk.mssql }
